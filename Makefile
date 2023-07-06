@@ -25,9 +25,6 @@ uninstall:
 open:
 	@open -n ~/Desktop/calc.app --args -AppCommandLineArg
 
-dvi:
-	@open README.pdf
-
 test: clean
 	$(CC) $(CFLAGS) $(TEST) $(BACK_SRC) $(STACS_SRC) $(TEST_LIBS) -o unit_test
 	./unit_test
@@ -50,14 +47,10 @@ dist:
 	tar -cvzf Archive_calc.tar.gz Archive_calc
 
 format:
-	@cp ../materials/linters/.clang-format ./
-	clang-format -i */*.c */*/*.c */*.h */*/*.h */*.cpp
-	@rm .clang-format
+	clang-format --style=Google -i */*.c */*/*.c */*.h */*/*.h */*.cpp
 
 check: 
-	@cp ../materials/linters/.clang-format ./
-	clang-format -n */*.c */*/*.c */*.h */*/*.h */*.cpp
-	@rm .clang-format
+	clang-format --style=Google -n */*.c */*/*.c */*.h */*/*.h */*.cpp
 
 clean:
 	@rm -rf *.o

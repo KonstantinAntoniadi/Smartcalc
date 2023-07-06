@@ -1,6 +1,4 @@
 # SmartCalc
-> Created by edwinevi  
-> School 21 (Kzn)
 
 ## _Overview_
 ### Calc mode

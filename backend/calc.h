@@ -1,5 +1,5 @@
-#ifndef S21_CALC_H
-#define S21_CALC_H
+#ifndef CALC_H
+#define CALC_H
 #include <ctype.h>
 #include <math.h>
 #include <stdio.h>
@@ -31,6 +31,6 @@ int calculate(const char* rpn, double x, double* res);
 int validateRPN(char* postfix);
 char* doPostfix(char* infix);
 
-void printTest(char* str);  // что это?
+void printTest(char* str);
 
-#endif  // S21_CALC_H
+#endif  // CALC_H
